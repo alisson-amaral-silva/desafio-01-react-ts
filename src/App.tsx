@@ -1,8 +1,13 @@
 import './App.css'
+import { Header } from './components/Header'
 import './global.css'
 
 function App() {
-  return <h1>Deu bom</h1>
+  return (
+    <>
+      <Header />
+    </>
+  )
 }
 
 export default App
