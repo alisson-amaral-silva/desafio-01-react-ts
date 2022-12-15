@@ -7,5 +7,6 @@ export function Header() {
       <img src={todoLogo} alt="logotipo do app todo" />
       <strong>todo</strong>
     </header>
+
   )
 }
