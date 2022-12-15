@@ -44,3 +44,7 @@
   align-items: center;
   margin-top: 5.5rem;
 }
+
+.emptyListWrapper strong {
+  margin-top: 1rem;
+}
