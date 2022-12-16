@@ -16,22 +16,40 @@
   margin-top: 1rem;
 }
 
+.checkbox {
+  height: 20px;
+  width: 20px;
+  color: white;
+}
+
+.checkbox:checked {
+  accent-color: #5e60ce;
+}
+
 .defaultTaskText {
   color: var(--gray-100);
-  line-height: 0.9;
+  line-height: 0.7;
 }
 
 .completedTaskText {
   text-decoration: line-through;
   color: var(--gray-300);
-  line-height: 0.9;
+  line-height: 0.7;
 }
 
-.boxWrapper button {
+.boxWrapper .deleteTaskWrapper {
   color: var(--gray-100);
 }
 
-.boxWrapper button {
+.boxWrapper .completeTaskWrapper {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  line-height: 0;
+  box-shadow: none;
+}
+
+.boxWrapper .deleteTaskWrapper {
   background: transparent;
   border: 0;
   color: var(--gray-300);
@@ -40,6 +58,6 @@
   line-height: 0;
 }
 
-.boxWrapper button:hover {
+.boxWrapper .deleteTaskWrapper:hover {
   color: var(--red-500);
 }

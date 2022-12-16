@@ -27,6 +27,17 @@ export function Task() {
     setTaskList(tasksWithoutDeletedOne)
   }
 
+  function completeTask(idToBeCompleted: string) {
+    const completedTasksList = taskList.map((task) => {
+      if(task.id === idToBeCompleted) {
+        return { ...task, isCompleted: !task.isCompleted }
+      }
+      return task
+    })
+    setTaskList(completedTasksList)
+  }
+
+
   function handleCreatTask(event: FormEvent) {
     event.preventDefault()
 
@@ -73,8 +84,9 @@ export function Task() {
         taskList.map((task) => {
           return (
             <TaskItem
-              onDeleteComment={deleteTask}
-              id={task.description}
+              key={task.id}
+              onCompleteTask={completeTask}
+              onDeleteTask={deleteTask}
               task={task}
             />
           )
