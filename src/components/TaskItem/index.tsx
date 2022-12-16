@@ -1,14 +1,18 @@
 import { Trash } from 'phosphor-react'
 import { Checkbox } from '../Checkbox'
 import styles from './TaskItem.module.css'
-import { Tasks } from '../TaskList'
+import { TaskProps } from '../Task'
 
 interface TaskItemProps {
-  task: Tasks
+  task: TaskProps
   id: string
+  onDeleteComment: (id: string) => void
 }
 
-export function TaskItem({ id, task }: TaskItemProps) {
+export function TaskItem({ id, task, onDeleteComment }: TaskItemProps) {
+  function handleDeleteComment() {
+    onDeleteComment(task.id)
+  }
   return (
     <div className={styles.boxWrapper}>
       <Checkbox id={`${id}-checkbox`} />
@@ -20,7 +24,7 @@ export function TaskItem({ id, task }: TaskItemProps) {
         {task.description}
       </span>
 
-      <button>
+      <button onClick={handleDeleteComment} title="Deletar task">
         <Trash size={20} />
       </button>
     </div>
