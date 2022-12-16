@@ -1,0 +1,45 @@
+.boxWrapper {
+  margin-top: 1.5rem;
+  background: var(--gray-400);
+  width: 100%;
+  height: 4.5rem;
+  display: grid;
+  grid-template-columns: 1rem 1fr 1rem;
+  align-items: flex-start;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--gray-500);
+}
+
+.boxWrapper + .boxWrapper {
+  margin-top: 1rem;
+}
+
+.defaultTaskText {
+  color: var(--gray-100);
+  line-height: 0.9;
+}
+
+.completedTaskText {
+  text-decoration: line-through;
+  color: var(--gray-300);
+  line-height: 0.9;
+}
+
+.boxWrapper button {
+  color: var(--gray-100);
+}
+
+.boxWrapper button {
+  background: transparent;
+  border: 0;
+  color: var(--gray-300);
+  cursor: pointer;
+
+  line-height: 0;
+}
+
+.boxWrapper button:hover {
+  color: var(--red-500);
+}

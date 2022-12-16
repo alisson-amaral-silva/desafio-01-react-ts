@@ -1,7 +1,6 @@
+import { EmptyList } from '../EmptyList'
+import { TaskItem } from '../TaskItem'
 import styles from './TaskList.module.css'
-import clipboard from '../../assets/clipboard.svg'
-import { Trash } from 'phosphor-react'
-import { Checkbox } from '../Checkbox'
 
 export interface Tasks {
   id: number
@@ -27,34 +26,11 @@ export function TaskList({ tasks }: TaskListProps) {
         </strong>
       </header>
       {tasks?.length ? (
-        <div className={styles.listWrapper}>
-          {tasks.map((task, index) => {
-            return (
-              <div className={styles.boxWrapper}>
-                <Checkbox id={`${index}`} />
-                <span
-                  className={
-                    task.isCompleted
-                      ? styles.completedTaskText
-                      : styles.defaultTaskText
-                  }
-                >
-                  {task.description}
-                </span>
-
-                <button>
-                  <Trash size={20} />
-                </button>
-              </div>
-            )
-          })}
-        </div>
+        tasks.map((task) => {
+          return <TaskItem id={task.description} task={task} />
+        })
       ) : (
-        <div className={styles.emptyListWrapper}>
-          <img src={clipboard} alt="icone de lista de itens" />
-          <strong>Você ainda não tem tarefas cadastradas</strong>
-          <span>Crie tarefas e organize seus itens a fazer</span>
-        </div>
+        <EmptyList />
       )}
     </>
   )
