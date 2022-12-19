@@ -2,7 +2,6 @@
   Desafio 01 - Ignite
 </h1>
 
-Ambiente deployado
 [Desafio 01](https://desafio-01-react-ts.vercel.app/)
 
 ![demo](https://raw.githubusercontent.com/alisson-amaral-silva/desafio-01-react-ts/main/public/img/todo.png)
