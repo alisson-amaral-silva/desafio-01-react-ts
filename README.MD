@@ -30,3 +30,8 @@ yarn dev
 ```
 
 Abra [http://localhost:5173/](http://localhost:5173) com seu navegador para ver o resultado.
+
+
+## Ambiente deployado
+
+Abra [Desafio 01](https://desafio-01-react-ts.vercel.app/)
