@@ -7,7 +7,7 @@
 
 ## Quais os componentes internos?
 
-This project uses lot of stuff such as:
+Este projeto contem algumas ferramentas como:
 
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
